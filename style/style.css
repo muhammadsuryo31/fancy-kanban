@@ -1,0 +1,264 @@
+/* +++++++++++++++++++++++++++++++++++++++++++++++++ */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    margin-top: 20px;
+    width: 400px;
+}
+
+.actions {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+
+.actions a {
+    text-decoration: none;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-text-title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-header {
+    width: 400px;
+}
+
+.container-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    height: 600px;
+    max-height: 900px;
+    width: 400px;
+}
+
+.card-body{
+    background-color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    border: 10px;
+    width: 350px;
+    max-height: 175px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#backlog-main{
+    background-color: #f53b57;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#backlog-card-container {
+    background-color: #ef5777;
+}
+
+#todo-main{
+    background-color: #00d8d6;
+    display: flex;
+    flex-direction: column;
+}
+
+#todo-card-container {
+    background-color: #34e7e4;
+}
+
+#doing-main{
+    background-color: #ffa801;
+}
+
+#doing-card-container {
+    background-color: #ffdd59;
+}
+#done-main{
+    background-color: #808e9b;
+}
+
+#done-card-container {
+    background-color: #d2dae2;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#main-body {
+    background-color:#d1ccc0;
+}
+
+#register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#register-container{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#register-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    border-radius: 30px;
+}
+
+#title-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 352px;
+    background-color: #B5FD8F;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: 10px;
+}
+
+.form-control {
+    width: 300px;
+}
+
+.form-group {
+    width: 550px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#login-container{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#login-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+#title-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 352px;
+    background-color: #8FDAFD;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: 10px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++ */
+#task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-container{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#task-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+#title-task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 352px;
+    background-color: #F99C88;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: 10px;
+}
+
+.dropdown-toogle {
+    width: 500px;
+}
+
+#task-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-container-edit{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+#task-row-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+#title-task-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 352px;
+    background-color: #FDFB8F;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: 10px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++ */
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+

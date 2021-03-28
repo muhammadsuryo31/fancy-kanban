@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style//style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Kanban</title>
+</head>
+<body id="main-body">
+  <div id="app"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarid">
+        <div class="container-fluid">
+          <h3 class="title">Fancy Kanban</h3>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="#" id="nav-register">Register</a>
+
+              <a class="nav-link active" href="#" id="nav-login">Login</a>
+
+              <a class="nav-link active" href="#" id="nav-task">New Task</a>
+
+              <a class="nav-link active" href="#" id="nav-logout">Logout</a>
+               
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <!-- register form -->
+    <div id="register-container">
+      <div class="box col-5" id="register-form">
+          <div class="card" id= "register-row">
+              <div class="card-header" id="title-register">
+              <p class="card-text-title">REGISTER</p>
+              </div>
+              <form id="register">
+                <div class="form-group">
+                  <label for="register-name" class="form-label" style="text-align: center;">Name</label>
+                    <input type="text" class=" form-control rounded-pill" id="register-name" placeholder="Muhammad Suryo">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="register-email" class="form-label" style="text-align: center;">Email</label>
+                    <input type="email" class="form-control rounded-pill" id="register-email" placeholder="example@mail.com">
+                </div>
+                <br>
+                <div class="form-group mb-3">
+                  <label for="register-password" class="form-label" style="text-align: center;">Password</label>
+                    <input type="password" class="form-control rounded-pill" id="register-password" placeholder="must contain 6 (six) or more characters">
+                    <input type="checkbox" class="password-revealer" onclick="revealPassword('register')"> Show Password
+                </div>
+                <div class="text-center btn-lg">
+                  <button type="submit" class="btn btn-outline-primary rounded-pill" id="register-submit">Register</button>
+                </div>
+              </form>
+          </div>
+      </div>
+    </div>
+
+    <!-- login form -->
+    <div id="login-container">
+      <div class="box col-5" id="login-form">
+          <div class="card" id= "login-row">
+              <div class="card-header" id="title-login">
+              <p class="card-text-title">LOGIN</p>
+              </div>
+              <form id="login">
+                <div class="form-group">
+                  <label for="login-email" class="form-label" style="text-align: center;">Email</label>
+                    <input type="email" class="form-control form-control rounded-pill" id="login-email" placeholder="example@mail.com">
+                </div>
+                <br>
+                <div class="form-group mb-3">
+                  <label for="login-password" class="form-label" style="text-align: center;">Password</label>
+                    <input type="password" class="form-control form-control rounded-pill" id="login-password" placeholder="must contain 6 (six) or more characters">
+                    <input type="checkbox" class="password-revealer" onclick="revealPassword('login')"> Show Password
+                </div>
+                <div class="text-center btn-lg">
+                  <button type="submit" class="btn btn-outline-primary rounded-pill" id="login-submit">login</button>
+                </div>
+              </form>
+          </div>
+      </div>
+    </div>
+
+    <!-- add Task -->
+    <div id="task-container">
+      <div class="box col-5" id="task-form">
+          <div class="card" id= "task-row">
+              <div class="card-header" id="title-task">
+              <p class="card-text-title">ADD TASK</p>
+              </div>
+              <form id="task">
+                <div class="form-group">
+                  <label class="form-label" style="text-align: center;">Task</label>
+                    <textarea name="thetask" form="task" class="form-control" placeholder="type task here" rows="2"></textarea>
+                </div>
+                <br>
+                <div class="form-group mb-3">
+                  <label for="task-phase" class="form-label" style="text-align: center;">Move to Which Phase?</label>
+                  <br>
+                  <select id="task-phase" name="phase-group" class="dropdown-toogle">
+                    <option value="backlog">Backlog</option>
+                    <option value="todo">To do</option>
+                    <option value="doing">Doing</option>
+                    <option value="done">Done</option>
+                  </select>
+                </div>
+                <div class="text-center btn-lg">
+                  <button type="submit" class="btn btn-outline-primary rounded-pill rounded-sm" id="task-submit">Submit</button>
+                </div>
+                <div class="text-center btn-lg">
+                  <button type="button" class="btn btn-outline-danger rounded-pill rounded-sm" id="task-cancel">Cancel</button>
+                </div>
+              </form>
+          </div>
+      </div>
+    </div>
+
+    <!-- edit Task -->
+    <div id="task-container-edit">
+      <div class="box col-5" id="task-form-edit">
+          <div class="card" id= "task-row-edit">
+              <div class="card-header" id="title-task-edit">
+              <p class="card-text-title">EDIT TASK</p>
+              </div>
+              <form id="task-edit">
+                <div class="form-group">
+                  <label class="form-label" style="text-align: center;">Task</label>
+                    <textarea name="thetask" form="task" class="form-control" placeholder="type task here" rows="2"></textarea>
+                </div>
+                <br>
+                <div class="form-group mb-3">
+                  <label for="task-phase-edit" class="form-label" style="text-align: center;">Move to Which Phase?</label>
+                  <br>
+                  <select id="task-phase-edit" name="phase-group" class="dropdown-toogle">
+                    <option value="backlog">Backlog</option>
+                    <option value="todo">To do</option>
+                    <option value="doing">Doing</option>
+                    <option value="done">Done</option>
+                  </select>
+                </div>
+                <div class="text-center btn-lg">
+                  <button type="submit" class="btn btn-outline-primary rounded-pill rounded-sm" id="task-submit-edit">Submit</button>
+                </div>
+                <div class="text-center btn-lg">
+                  <button type="button" class="btn btn-outline-danger rounded-pill rounded-sm" id="task-cancel-edit">Cancel</button>
+                </div>
+              </form>
+          </div>
+      </div>
+    </div>
+
+
+    <!-- mainpage -->
+    <div class="container-fluid">
+            <div class="box col-3" id="backlog-main-container">
+                <!-- backlog -->
+                  <div class="card" id= "backlog-main">
+                      <!-- <img src="./resources/xps-kLfkVa_4aXM-unsplash.jpg" class="card-img-top" alt="picture of a laptop"> -->
+                      <div class="card-header">
+                      <p class="card-text-title">BACKLOG</p>
+                      </div>
+                      <div class="container-body" id="backlog-card-container">
+                          <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text author">author: example@mail.com</p>
+                            <div class="actions">
+                                <a href="#" class="card-link text-primary">Edit</a>
+                                <a href="#" class="card-link text-danger">Delete</a>
+                                <a href="#" class="card-link text-success" >Actions</a>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+
+            <div class="box col-3" id="todo-main-container">
+              <!-- todo -->
+                <div class="card" id= "todo-main">
+                    <div class="card-header">
+                    <p class="card-text-title">TO DO</p>
+                    </div>
+                    <div class="container-body">
+                      <!-- kanban card -->
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text author">author: example@mail.com</p>
+                          <div class="actions">
+                              <a href="#" class="card-link text-primary">Edit</a>
+                              <a href="#" class="card-link text-danger">Delete</a>
+                              <form id="action">
+                                <select id="task-category-edit" name="phase-group">
+                                  <option value="backlog">Backlog</option>
+                                  <option value="todo">To do</option>
+                                  <option value="doing">Doing</option>
+                                  <option value="done">Done</option>
+                                </select>
+                              </form>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          <div class="box col-3" id="doing-main-container">
+            <!-- doing -->
+              <div class="card" id= "doing-main">
+                  <!-- <img src="./resources/xps-kLfkVa_4aXM-unsplash.jpg" class="card-img-top" alt="picture of a laptop"> -->
+                  <div class="card-header">
+                  <p class="card-text-title">DOING</p>
+                  </div>
+                  <div class="container-body">
+                    <!-- kanban card -->
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text author">author: example@mail.com</p>
+                        <div class="actions">
+                            <a href="#" class="card-link text-primary">Edit</a>
+                            <a href="#" class="card-link text-danger">Delete</a>
+                            <a href="#" class="card-link text-success" >Actions</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+        <div class="box col-3" id="done-main-container">
+          <!-- done -->
+            <div class="card" id= "done-main">
+                <!-- <img src="./resources/xps-kLfkVa_4aXM-unsplash.jpg" class="card-img-top" alt="picture of a laptop"> -->
+                <div class="card-header">
+                <p class="card-text-title">DONE</p>
+                </div>
+                <div class="container-body">
+                  <!-- kanban card -->
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text author">author: example@mail.com</p>
+                      <div class="actions">
+                          <a href="#" class="card-link text-primary">Edit</a>
+                          <a href="#" class="card-link text-danger">Delete</a>
+                          <a href="#" class="card-link text-success" >Actions</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./src/main.js"></script>
+</body>
+</html>
